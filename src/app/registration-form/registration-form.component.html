@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giriş Sayfası</title>
+  <link rel="stylesheet" href="registration-form.component.css">
+</head>
+
+<body>
+  <div class="registration-container">
+    <h1>Kayıt Ol</h1>
+    <form>
+      <label for="username">Adı:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="username">Soyadı:</label>
+      <input type="text" id="soyad" name="soyad" required>
+
+      <label for="username">Telefon no:</label>
+      <input type="text" id="telNo" name="telNo" required>
+
+      <label for="username">Kullanıcı Adı:</label>
+      <input type="text" id="username" name="username" required>
+      
+      <label for="password">Şifre:</label>
+      <input type="password" id="password" name="password" required>
+      
+      <button type="sign-up">Kayıt Ol</button>
+      <button routerLink="/login">Giriş Yap</button>
+      
+    </form>
+  </div>
+</body>
+
+</html>
