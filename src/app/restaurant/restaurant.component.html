@@ -8,56 +8,41 @@
   <title>Yemek Sipariş Uygulaması</title>
   <link rel="stylesheet" href="./restaurant.component.css">
 
-  <style>
-
-  </style>
 </head>
 
 <body>
-  <ul class="menu cf">
-    <div class="text-center">
-      <h3>YEMEK SİPARİŞ UYGULAMASI</h3>
-    </div>
-    <li>
-      <a href="">Ana Sayfa</a>
-    </li>
-    <li>
-      <a href="">Tüm Yemekler</a>
-    </li>
-    <li>
-      <a href="">Menü</a>
-      <ul class="submenu">
-        <li><a href="">Çorbalar</a></li>
-        <li><a href="">Mezeler</a></li>
-        <li><a href="">Salatalar</a></li>
-        <li><a href="">Ana Yemekler</a></li>
-        <li><a href="">Ara Sıcaklar</a></li>
-        <li><a href="">İçecekler</a></li>
-        <li><a href="">Tatlılar</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="">Siparişlerim</a>
-    </li>
-    <li>
-      <a href="">Kampanyalar</a>
-      <ul class="submenu">
-        <li><a href="">Bana Özel Kampanyalar</a></li>
-        <li><a href="">Geçmiş Kampanyalarım</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="">Profil</a>
-    </li>
-    <li>
+  <div class="main-panel">
+    <img src="assets/bowl.png" alt="resim bulunamadı!!" height="120" width="120" />
+    <!-- <img src="assets/newLogo.png" alt="resim bulunamadı!!" height="30" width="250"/> -->
+    <ul class="menu cf">
+      <li>
+        <a href=" ">Ana Sayfa</a>
+      </li>
+      <li>
+        <a routerLink="/yemek">Menü</a>
+      </li>
+      <li>
+        <a routerLink="/siparis">Siparişlerim</a>
+      </li>
+      <li>
+        <a routerLink="/kampanyalar">Kampanyalar</a>
+        <!-- <ul class="submenu">
+            <li><a href="">Bana Özel Kampanyalar</a></li>
+            <li><a href="">Geçmiş Kampanyalarım</a></li>
+          </ul> -->
+      </li>
+      <li>
+        <a routerLink="/profil">Profil</a>
+      </li>
+      <li>
         <a routerLink="/login">Giriş Yap</a>
-    </li>
-  </ul>
+      </li>
+    </ul>
+  </div>
   <header>
     <div class="image-container">
       <img src="assets/food.png" alt="resim bulunamadı!!" width="1519" height="600" />
     </div>
   </header>
 </body>
-
 </html>

@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { LoginComponent } from './loginPage/login.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { YemekComponent } from './yemek/yemek.component';
+import { KampanyaComponent } from './kampanya/kampanya.component';
+import { ProfilComponent } from './profil/profil.component';
+import { SiparisComponent } from './siparis/siparis.component';
 
 
 @NgModule({
@@ -13,7 +17,11 @@ import { RegistrationFormComponent } from './registration-form/registration-form
     AppComponent,
     RestaurantComponent,
     LoginComponent,
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    YemekComponent,
+    KampanyaComponent,
+    ProfilComponent,
+    SiparisComponent
   ],
   imports: [
     BrowserModule,
