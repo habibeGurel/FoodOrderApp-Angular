@@ -1,1 +1,58 @@
-<p>kampanya works!</p>
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yemek Menüsü</title>
+    <link rel="stylesheet" href="./kampanya.component.css">
+
+</head>
+
+<div class="main-panel">
+    <img src="assets/bowl.png" alt="resim bulunamadı!!" height="120" width="120" />
+    <ul class="menu cf">
+        <li>
+            <a href=" ">Ana Sayfa</a>
+        </li>
+        <li>
+            <a routerLink="/yemek">Menü</a>
+        </li>
+        <li>
+            <a routerLink="/siparis">Siparişlerim</a>
+        </li>
+        <li>
+            <a routerLink="/kampanyalar">Kampanyalar</a>
+        </li>
+        <li>
+            <a routerLink="/profil">Profil</a>
+        </li>
+        <li>
+            <a routerLink="/login">Giriş Yap</a>
+        </li>
+    </ul>
+</div>
+
+<body>
+    <div class="kampanya-container">
+        <div class="txt">
+            <h2>KAMPANYALAR</h2>
+        </div>
+        <div>
+            <div class="navbar">
+                <button
+                    *ngFor="let category of ['BANA ÖZEL KAMPANYALAR', 'GEÇMİŞ KAMPANYALARIM']"
+                    (click)="filterKampanya(category)" [class.active]="selectedCategories.includes(category)">
+                    {{ category }}
+                </button>
+            </div>
+            <div>
+                <div *ngFor="let y of kampanyalar" [class.hidden]="!isKampanyaVisible(y.category)">
+                    {{ y.name }} - {{ y.category }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>üRÜN LİSTELE</title>
+  <link rel="stylesheet" href="./list.component.css">
+</head>
+<table class="table">
+  <thead class="thead-dark">
+    <tr class="table-secondary">
+      <th scope="col">Ürün Id</th>
+      <th scope="col">Ürün Adı</th>
+      <th scope="col">Stok</th>
+      <th scope="col">Fiyat</th>
+      <th scope="col">Kategori</th>
+      <th></th>
+      <th></th>
+      <th width="30px"><a class="btn btn-outline-light" routerLink="/urun-ekle" type="button"
+          style="color: #34495e;"><img src="assets/add.png" width="30" height="30">Ürün Ekle</a>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of data">
+      <th scope="row">{{ item.id }}</th>
+      <td>{{ item.name }}</td>
+      <td>{{ item.stock }}</td>
+      <td>{{ item.price }}</td>
+      <td>{{ item.category }}</td>
+
+      <!-- <td width="10px" (click)="selectedFiles ()"><button type="button" class="btn btn-outline-light" > <img src="assets/photo.png" alt="resim bulunamadı!!" width="30px" height="30px"></button>
+        <app-file-upload [options]="fileUploadOptions"></app-file-upload>
+      </td> -->
+      <!-- ... -->
+      <td width="10px" (click)="selectedFiles()">
+        <button type="button" class="btn btn-outline-light">
+          <img src="assets/photo.png" alt="resim bulunamadı!!" width="30px" height="30px">
+        </button>
+      </td>
+      <!-- ... -->
+
+
+      <!-- <th width="10px"><app-file-upload [options]="fileUploadOptions"></app-file-upload></th>  -->
+
+      <th width="30px"><a class="btn btn-outline-light" routerLink="/update"><img src="assets/edit.png" alt="resim bulunamadı!!" width="30"
+            height="30" /></a></th>
+      <td [id]="item.id" controller="Products" appDelete (callback)="getProducts()"></td>
+      <th></th>
+
+    </tr>
+  </tbody>
+</table>
+<div class="total-count">
+  Toplam Ürün Sayısı: {{ totalCount }}
+</div>
+

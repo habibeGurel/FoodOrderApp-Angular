@@ -1,3 +1,8 @@
+.main-panel {
+    display: flex;
+    justify-content: center;
+}
+
 body {
     color: #34495e;
     background-image: url("/assets/food.png");
@@ -9,16 +14,25 @@ body {
     display: flex;
     height: 100vh;
 }
+.txt{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
 .yemek-container {
     font-family: 'Times New Roman', Times, serif;
     height: 100vh;
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 0 5px #34495e;
     padding: 20px;
+    width: 100%;
+    margin: 0 auto;
 }
+
 .navbar {
     font-family: 'Times New Roman', Times, serif;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     background-color: #34495e;
     padding: 10px;
@@ -33,7 +47,7 @@ body {
     cursor: pointer;
 }
 
-.navbar button:hover{
+.navbar button:hover {
     background-color: #e74c3c;
 }
 
@@ -44,4 +58,58 @@ body {
 
 .hidden {
     display: none;
+}
+
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.menu,
+.submenu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu {
+    margin: 10px auto;
+    width: 800px;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.menu>li {
+    background: #34495e;
+    float: left;
+    position: relative;
+    transform: skewX(25deg);
+    z-index: 1;
+}
+
+.menu a {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Arial, Helvetica;
+    font-size: 14px;
+}
+
+.menu li:hover {
+    background: #e74c3c;
+}
+
+.menu>li>a {
+    transform: skewX(-25deg);
+    padding: 1em 2em;
 }

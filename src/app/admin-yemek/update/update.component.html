@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>üRÜN EKLE</title>
+    <link rel="stylesheet" href="./update.component.css">
+</head>
+<div>
+    <div class="txt">
+        <h2>Ürün Güncelle</h2>
+    </div>
+</div>
+
+<body>
+    <div class="yemek-container">
+        <div class="product-container">
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="category"
+                        style="font-size: 20px; font-family: 'Times New Roman', Times, serif; color: #34495e;">Kategori
+                        Bilgisi:</label>
+                    <select class="form-control" id="category" #txtCategory>
+                        <option value="Çorbalar">Çorbalar</option>
+                        <option value="Mezeler">Mezeler</option>
+                        <option value="Salatalar">Salatalar</option>
+                        <option value="Ara Sıcaklar">Ara Sıcaklar</option>
+                        <option value="Ana Yemekler">Ana Yemekler</option>
+                        <option value="Tatlılar">Tatlılar</option>
+                        <option value="İçecekler">İçecekler</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <h3 style="font-size: 20px; font-family: 'Times New Roman', Times, serif; color: #34495e;">Ürün Adı:
+                </h3>
+                <input class="form-control" type="text" placeholder="Ürün Adı" #txtName>
+            </div>
+            <div class="form-group">
+                <h3 style="font-size: 20px; font-family: 'Times New Roman', Times, serif; color: #34495e;">Stok Bilgisi:
+                </h3>
+                <input class="form-control" type="number" placeholder="Stok" min="0" value="0" #txtStock>
+            </div>
+            <div class="form-group">
+                <h3 style="font-size: 20px; font-family: 'Times New Roman', Times, serif; color: #34495e;">Fiyat
+                    Bilgisi:</h3>
+                <input class="form-control" type="number" placeholder="Fiyat" min="0" value="0" #txtPrice>
+            </div>
+            
+            <div class="form-group">
+                <button type="button" class="btn btn-outline-primary" style="font-size: 18px;"
+                    (click)="update(txtCategory, txtName, txtStock, txtPrice)">Ürün Güncelle</button>
+            </div>
+        </div>
+    </div>
+</body>

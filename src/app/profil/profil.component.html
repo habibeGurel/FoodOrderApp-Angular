@@ -1,1 +1,55 @@
-<p>profil works!</p>
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yemek Menüsü</title>
+    <link rel="stylesheet" href="./profil.component.css">
+
+</head>
+
+<div class="main-panel">
+    <img src="assets/bowl.png" alt="resim bulunamadı!!" height="120" width="120" />
+    <ul class="menu cf">
+        <li>
+            <a href=" ">Ana Sayfa</a>
+        </li>
+        <li>
+            <a routerLink="/yemek">Menü</a>
+        </li>
+        <li>
+            <a routerLink="/siparis">Siparişlerim</a>
+        </li>
+        <li>
+            <a routerLink="/kampanyalar">Kampanyalar</a>
+        </li>
+        <li>
+            <a routerLink="/profil">Profil</a>
+        </li>
+        <li>
+            <a routerLink="/cikis">Çıkış Yap</a>
+        </li>
+    </ul>
+</div>
+
+<body>
+    <div class="profil-container">
+        <div class="txt">
+            <h2>PROFİL</h2>
+        </div>
+        <div class="bilgi-container">
+            <img src="assets/profile.png" alt="resim bulunamadı!!" height="120" width="120" />
+            <span class="text">{{ userProfile?.name }}</span> <!-- userProfile nesnesi null değilse adını göster -->
+        </div>
+        <div>
+            <div *ngIf="userProfile">
+                <p>Name: {{ userProfile.name }}</p>
+                <p>Username: {{ userProfile.username }}</p>
+                <p>Tel No: {{ userProfile.telNo }}</p>
+              </div>
+              
+        </div>
+    </div>
+</body>

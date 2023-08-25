@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
     selector: 'main', //<main></main>
@@ -6,6 +7,9 @@ import { Component } from "@angular/core";
     styleUrls: ['./restaurant.component.css']
 })
 export class RestaurantComponent{
-    constructor(){}
+    constructor(private toastr: ToastrService){
+        toastr.success("Hoşgeldiniz..", "Yemek Sipariş Uygulaması");
+
+    }
 
 }

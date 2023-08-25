@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yemek Menüsü</title>
+    <link rel="stylesheet" href="./admin-yemek.component.css">
+
+</head>
+
+<div class="main-panel">
+    <img src="assets/bowl.png" alt="resim bulunamadı!!" height="120" width="120" />
+    <h3>ADMİN</h3>
+    <ul class="menu cf">
+        <li>
+            <a href="/admin">Ana Sayfa</a>
+        </li>
+        <li>
+            <a routerLink="/adminYemek">ÜRÜN İŞLEMLERİ</a>
+        </li>
+        <li>
+            <a routerLink="/adminSiparis">Siparişleri Yönet</a>
+        </li>
+    </ul>
+</div>
+
+<body>
+    <div class="yemek-container">
+        <div class="txt">
+            <h2>YEMEKLER</h2>
+        </div>
+        <div class="product-container">
+            <!-- <nav class="navbar navbar-light bg-light">
+                <form class="form-inline ml-auto-button">
+                    <button class="btn btn-outline-light" routerLink="/urun-ekle" type="button"><img src="assets/add.png" width="30" height="30"></button>
+                </form>
+            </nav> -->
+            <div class="row">
+                <app-list></app-list>
+            </div>
+        </div>
+    </div>
+</body>

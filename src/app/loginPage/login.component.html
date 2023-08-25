@@ -8,17 +8,28 @@
   <link rel="stylesheet" href="login.component.css">
 </head>
 
+<div class="main-panel">
+  <img src="assets/bowl.png" alt="resim bulunamadı!!" height="120" width="120" />
+  <ul class="menu cf">
+    <li>
+      <a href=" ">Ana Sayfa</a>
+    </li>
+  </ul>
+</div>
+
+
 <body>
   <div class="login-container">
     <h1>Giriş Yap</h1>
-    <form>
+    <form [formGroup]="loginForm" (ngSubmit)="girisYap()">
       <label for="username">Kullanıcı Adı:</label>
-      <input type="text" id="username" name="username" required>
-      
+      <input type="text" id="username" formControlName="username">
+    
       <label for="password">Şifre:</label>
-      <input type="password" id="password" name="password" required>
-      
-      <button type="login">Giriş Yap</button>
+      <input type="password" id="password" formControlName="password">
+    
+      <button type="submit">Giriş Yap</button>
+      <button *ngIf="loginForm.valid && isAdmin()" (click)="openAdminPageInNewTab()">Admin Sayfası</button>
       <button routerLink="/sign-up">Kayıt Ol</button>
     </form>
   </div>

@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+// import { HttpClient } from '@angular/common/http';
+// import { ApiService } from './services/api.service';
+
+declare var $: any
 
 @Component({
   selector: 'app',
@@ -7,5 +11,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'restaurantProject';
-
+  constructor(){}
 }
+

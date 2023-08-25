@@ -1,1 +1,58 @@
-<p>siparis works!</p>
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yemek Menüsü</title>
+    <link rel="stylesheet" href="./siparis.component.css">
+
+</head>
+
+<div class="main-panel">
+    <img src="assets/bowl.png" alt="resim bulunamadı!!" height="120" width="120" />
+    <ul class="menu cf">
+        <li>
+            <a href=" ">Ana Sayfa</a>
+        </li>
+        <li>
+            <a routerLink="/yemek">Menü</a>
+        </li>
+        <li>
+            <a routerLink="/siparis">Siparişlerim</a>
+        </li>
+        <li>
+            <a routerLink="/kampanyalar">Kampanyalar</a>
+        </li>
+        <li>
+            <a routerLink="/profil">Profil</a>
+        </li>
+        <li>
+            <a routerLink="/login">Giriş Yap</a>
+        </li>
+    </ul>
+</div>
+
+<body>
+    <div class="siparis-container">
+        <div class="txt">
+            <h2>SİPARİŞLERİM</h2>
+        </div>
+        <div>
+            <div>
+                <!-- <button
+                    *ngFor="let category of ['Çorbalar', 'Mezeler', 'Salatalar', 'Ara Sıcaklar', 'Ana Yemekler', 'Tatlılar', 'İçecekler']"
+                    (click)="filterMeals(category)" [class.active]="selectedCategories.includes(category)">
+                    {{ category }}
+                </button> -->
+            </div>
+            <div>
+                <!-- <div *ngFor="let y of yemekler" [class.hidden]="!isMealVisible(y.category)">
+                    {{ y.name }} - {{ y.category }}
+                </div> -->
+            </div>
+        </div>
+
+    </div>
+</body>

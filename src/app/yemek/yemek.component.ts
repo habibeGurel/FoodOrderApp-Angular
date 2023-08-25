@@ -7,13 +7,13 @@ import { Component } from '@angular/core';
 })
 export class YemekComponent {
   yemekler = [
-    { name: 'Yemek 1', category: 'Çorbalar' },
-    { name: 'Yemek 2', category: 'Mezeler' },
-    { name: 'Yemek 3', category: 'Salatalar' },
-    { name: 'Yemek 4', category: 'Ara Sıcaklar' },
-    { name: 'Yemek 5', category: 'Ana Yemekler' },
-    { name: 'Yemek 6', category: 'Tatlılar' },
-    { name: 'Yemek 7', category: 'İçecekler' },
+    { name: 'Yemek 1', category: 'ÇORBALAR' },
+    { name: 'Yemek 2', category: 'MEZELER' },
+    { name: 'Yemek 3', category: 'SALATALAR' },
+    { name: 'Yemek 4', category: 'ARA SICAKLAR' },
+    { name: 'Yemek 5', category: 'ANA YEMEKLER' },
+    { name: 'Yemek 6', category: 'TATLILAR' },
+    { name: 'Yemek 7', category: 'İÇECEKLER' },
   ];
 
   selectedCategories: string[] = [];
