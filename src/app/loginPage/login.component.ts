@@ -31,22 +31,18 @@ export class LoginComponent {
                     this.toastr.success('Kullanıcı girişi başarılı..')
                     this.userService.isAuthenticated;
                     this.router.navigate(['main']); // Kullanıcı girişi başarılıysa anasayfaya yönlendir
-                } else {
+                }else if(username === 'admin' && password === 'admin123') {
+                    this.openAdminPageInNewTab();
+                }
+                else {
                     this.toastr.error('Kullanıcı adı veya şifre hatalı.', 'Giriş Başarısız');
                 }
+                
             } catch (error) {
                 console.error('Bir hata oluştu.', error);
                 console.log(error);
                 this.toastr.error('Bir hata oluştu. Lütfen daha sonra tekrar deneyin.', 'Hata');
             }
-
-            if (username === 'admin' && password === 'admin123') {
-                this.openAdminPageInNewTab();
-            } else {
-
-            }
-
-
         }
     }
 
